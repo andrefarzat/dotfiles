@@ -12,7 +12,7 @@ fi
 if [[ $action == 'init' ]]; then
     
     # Giving executing permition for all bin/* files
-    chmod +x bin/*
+    chmod +x $dotdir/bin/*
 
     for file in $dotdir/**/init.zsh
     do

@@ -1,1 +1,1 @@
-echo "zsh init"
+link_files $dotdir/zsh/.zshrc ~/.zshrc
