@@ -56,4 +56,4 @@ export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-source ./aliases.zsh
+source ~/.dotfiles/zsh/aliases.zsh
