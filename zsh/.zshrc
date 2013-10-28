@@ -47,21 +47,13 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=$PATH:/Applications/Postgres.app/Contents/MacOS/bin
+export PATH=$PATH:~/.dotfiles/bin
 
 # Reference: https://github.com/PostgresApp/PostgresApp/issues/109#issuecomment-18387546
 export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:$DYLD_LIBRARY_PATH
 
-# aliases
-
-alias cdd="cd /Library/WebServer/Documents"
-alias runserver="python manage.py runserver 0.0.0.0:8000"
-alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
-
-
-alias env_assembl="source ~/Documents/envs/assembl/bin/activate; cdd; cd assembl"
-alias env_caravan="source ~/Documents/envs/caravan/bin/activate; cdd; cd caravan"
-alias env_fipro="source ~/Documents/envs/fipro/bin/activate; cdd; cd FichaProcesso/trunk/src"
-
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+source ./aliases.zsh

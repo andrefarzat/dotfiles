@@ -1,0 +1,43 @@
+#!/bin/zsh
+
+action=$1
+dotdir=~/.dotfiles
+
+if [[ "$action" == "" ]]; then
+    echo "Please inform 'init' or 'update'"
+    exit
+fi
+
+
+link_files(){
+    ln -s $1 $2
+    echo "linked: $1 -> $2"
+}
+
+
+if [[ $action == 'init' ]]; then
+    
+    for file in $dotdir/**/init.zsh
+    do
+        chmod +x $file
+        echo "Initing $file..."
+        $file
+    done
+
+    echo "Init Done !"
+    exit
+fi
+
+
+if [[ $action == 'update' ]]; then
+
+    for file in $dotdir/**/update.zsh
+    do
+        chmod +x $file
+        $file
+    done
+
+    exit
+fi
+
+echo "Invalid argument $1. Valid options: init, update"
