@@ -1,1 +1,1 @@
-link_files "nada" "algo"
+echo "zsh init"

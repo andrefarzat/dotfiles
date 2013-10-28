@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 action=$1
-dotdir=~/.dotfiles
+export dotdir=~/.dotfiles
 
 if [[ "$action" == "" ]]; then
     echo "Please inform 'init' or 'update'"
@@ -9,18 +9,16 @@ if [[ "$action" == "" ]]; then
 fi
 
 
-link_files(){
-    ln -s $1 $2
-    echo "linked: $1 -> $2"
-}
-
-
 if [[ $action == 'init' ]]; then
     
+    # Giving executing permition for all bin/* files
+    chmod +x bin/*
+
     for file in $dotdir/**/init.zsh
     do
         chmod +x $file
-        echo "Initing $file..."
+        echo ""
+        echo "Initing $file"
         $file
     done
 
