@@ -29,11 +29,26 @@ fi
 
 if [[ $action == 'update' ]]; then
 
+
     for file in $dotdir/**/update.zsh
     do
         chmod +x $file
+        echo ""
+        echo "Updating $file"
         $file
     done
+
+    # Commiting and pushing to git
+    current_folder=`pwd`
+    cd $dotdir
+
+
+    git add -A
+    git commit -am "Commit at `date +"%d %b %Y"`"
+    git pull --rebase
+    git push
+
+    cd current_folder
 
     exit
 fi

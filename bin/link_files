@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+ln -sf $1 $2
+echo "linked: $1 -> $2"

@@ -3,3 +3,5 @@
 	name = Andre Farzat
 [alias]
 	addremove = add -A
+[push]
+	default = simple
