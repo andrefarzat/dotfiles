@@ -48,7 +48,7 @@ if [[ $action == 'update' ]]; then
     git pull --rebase
     git push
 
-    cd current_folder
+    cd $current_folder
 
     exit
 fi
