@@ -1,0 +1,46 @@
+#!/usr/bin/python
+
+import requests
+import os
+import sys
+from datetime import datetime, timedelta
+
+
+USER_ID = 30
+USER = 'andre'
+PASSWD = 'hardPass'
+DATE_FORMAT = '%Y-%m-%d'
+
+def main():
+    url = 'http://%s:%s@redmine.caravan.coop' % (USER, PASSWD)
+    date = '2013-10-01'
+    super_total = 0
+
+    project_url = '%s/projects.json?user_id=%s' % (url, USER_ID)
+    response = requests.get(project_url)
+    projects = response.json()['projects']
+
+    for project in projects:
+        print "Project: %s" % project['name']
+
+        time_url = '%s/time_entries.json?spent_on=%s&user_id=%s&project_id=%s' % (url, '%3E%3D'+date, USER_ID, project['id'])
+        response = requests.get(time_url)
+    
+        entries = response.json()['time_entries']
+        total = 0
+
+        for entry in entries:
+            total += entry['hours']
+            super_total += entry['hours']
+
+        print "Hours: %s" % total
+
+    print ""
+    print "Total hours from %s: %s" % (date, super_total)
+    total_before_taxes = super_total * 45
+    print "Total before taxes: %s" % total_before_taxes
+    total_after_taxes = total_before_taxes - (total_before_taxes * 0.35)
+    print "Total after taxas %s" % total_after_taxes
+
+if __name__ == '__main__':
+    main()

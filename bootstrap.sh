@@ -12,3 +12,11 @@ brew install zsh
 echo ""
 echo "Installing oh-my-zsh"
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+echo ""
+echo "Installing ipython"
+pip install ipython
+
+echo ""
+echo "Installing virtualenv"
+pip install virtualenv
