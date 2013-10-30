@@ -6,15 +6,27 @@ import sys
 from datetime import datetime, timedelta
 
 
-USER_ID = 30
+USERS = {
+    'jo': 5,
+    'ben': 6,
+    'andre': 30
+}
+
+USER_ID = USERS['andre']
 USER = 'andre'
 PASSWD = 'hardPass'
 DATE_FORMAT = '%Y-%m-%d'
+
+
+if len(sys.argv) > 1:
+    USER_ID = USERS.get(sys.argv[1], USERS['andre'])
 
 def main():
     url = 'http://%s:%s@redmine.caravan.coop' % (USER, PASSWD)
     date = '2013-10-01'
     super_total = 0
+
+    print "Seeing report to id %s " % USER_ID
 
     project_url = '%s/projects.json?user_id=%s' % (url, USER_ID)
     response = requests.get(project_url)
