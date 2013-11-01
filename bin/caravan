@@ -23,7 +23,7 @@ if len(sys.argv) > 1:
 
 def main():
     url = 'http://%s:%s@redmine.caravan.coop' % (USER, PASSWD)
-    date = '2013-10-01'
+    date = '2013-11-01'
     super_total = 0
 
     print "Seeing report to id %s " % USER_ID
