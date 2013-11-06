@@ -1,7 +1,6 @@
 # aliases
 
 alias cdd="cd /Library/WebServer/Documents"
-alias runserver="python manage.py runserver 0.0.0.0:8000"
 alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
 
 
