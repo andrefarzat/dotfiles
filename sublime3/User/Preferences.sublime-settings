@@ -8,6 +8,7 @@
 		"CVS",
 		".sass-cache"
 	],
+	"font_size": 12,
 	"ignored_packages":
 	[
 		"Vintage"

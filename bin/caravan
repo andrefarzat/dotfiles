@@ -4,6 +4,7 @@ import requests
 import os
 import sys
 from datetime import datetime, timedelta
+from pprint import pprint as pp
 
 
 USERS = {
@@ -24,6 +25,8 @@ if len(sys.argv) > 1:
 def main():
     url = 'http://%s:%s@redmine.caravan.coop' % (USER, PASSWD)
     date = '2013-11-01'
+    today = datetime.now().strftime(DATE_FORMAT)
+    today_total = 0
     super_total = 0
 
     print "Seeing report to id %s " % USER_ID
@@ -45,14 +48,18 @@ def main():
             total += entry['hours']
             super_total += entry['hours']
 
+            if entry['spent_on'] == today:
+                today_total += entry['hours']
+
         print "Hours: %s" % total
 
     print ""
+    print "Total hours today %s: %s" % (today, today_total)
     print "Total hours from %s: %s" % (date, super_total)
     total_before_taxes = super_total * 45
     print "Total before taxes: %s" % total_before_taxes
     total_after_taxes = total_before_taxes - (total_before_taxes * 0.35)
-    print "Total after taxas %s" % total_after_taxes
+    print "Total after taxes %s" % total_after_taxes
 
 if __name__ == '__main__':
     main()
