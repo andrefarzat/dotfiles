@@ -3,6 +3,7 @@
 import requests
 import os
 import sys
+import time
 from datetime import datetime, timedelta
 from pprint import pprint as pp
 
@@ -23,11 +24,24 @@ DATE_FORMAT = '%Y-%m-%d'
 if len(sys.argv) > 1:
     USER_ID = USERS.get(sys.argv[1], USERS['andre'])
 
+def get_first_day_of_week(now):
+    date_str = '%s %s 1' % (now.year, now.strftime('%W'))
+    return datetime.strptime(date_str, '%Y %W %w').strftime(DATE_FORMAT)
+
+def get_last_day_of_week(now):
+    date_str = '%s %s 0' % (now.year, now.strftime('%W'))
+    return datetime.strptime(date_str, '%Y %W %w').strftime(DATE_FORMAT)
+
 def main():
     url = 'http://%s:%s@redmine.caravan.coop' % (USER, PASSWD)
-    date = '2013-11-01'
-    today = datetime.now().strftime(DATE_FORMAT)
+    now = datetime.now()
+    today = now.strftime(DATE_FORMAT)
+    start_week_date = get_first_day_of_week(now)
+    end_week_date = get_last_day_of_week(now)
+    start_month_date = datetime(year=now.year, month=now.month, day=1).strftime(DATE_FORMAT)
+
     today_total = 0
+    week_total = 0
     super_total = 0
 
     print "Seeing report to id %s " % USER_ID
@@ -39,7 +53,7 @@ def main():
     for project in projects:
         print "Project: %s" % project['name']
 
-        time_url = '%s/time_entries.json?spent_on=%s&user_id=%s&project_id=%s' % (url, '%3E%3D'+date, USER_ID, project['id'])
+        time_url = '%s/time_entries.json?spent_on=%s&user_id=%s&project_id=%s' % (url, '%3E%3D'+start_month_date, USER_ID, project['id'])
         response = requests.get(time_url)
     
         entries = response.json()['time_entries']
@@ -49,14 +63,20 @@ def main():
             total += entry['hours']
             super_total += entry['hours']
 
+            if entry['spent_on'] >= start_week_date and entry['spent_on'] <= end_week_date:
+                week_total += entry['hours']
+
             if entry['spent_on'] == today:
                 today_total += entry['hours']
 
         print "Hours: %s" % total
 
     print ""
-    print "Total hours today %s: %s" % (today, today_total)
-    print "Total hours from %s: %s" % (date, super_total)
+    print "Total hours for today: %s (%s)" % (today_total, today)
+    print "Total hours for the week: %s (%s - %s)" % (week_total, start_week_date, end_week_date)
+    print "Total hours for the month: %s (%s)" % (super_total, start_month_date)
+
+    print ""
     total_before_taxes = super_total * 45
     print "Total before taxes: %s" % total_before_taxes
     total_after_taxes = total_before_taxes - (total_before_taxes * 0.35)
