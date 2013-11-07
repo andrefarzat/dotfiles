@@ -6,6 +6,7 @@ import sys
 from datetime import datetime, timedelta
 from pprint import pprint as pp
 
+from local_settings import REDMINE_USER, REDMINE_PASSWORD
 
 USERS = {
     'jo': 5,
@@ -14,8 +15,8 @@ USERS = {
 }
 
 USER_ID = USERS['andre']
-USER = 'andre'
-PASSWD = 'hardPass'
+USER = REDMINE_USER
+PASSWD = REDMINE_PASSWORD
 DATE_FORMAT = '%Y-%m-%d'
 
 

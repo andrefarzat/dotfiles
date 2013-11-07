@@ -1,4 +1,8 @@
 .DS_Store
+*.pyc
+
+local_settings.py
+
 
 # Sublime3
 Package Control*
