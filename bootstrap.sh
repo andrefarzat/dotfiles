@@ -20,3 +20,6 @@ pip install ipython
 echo ""
 echo "Installing virtualenv"
 pip install virtualenv
+
+echo ""
+echo "Done! You can have a coke now ;)"
