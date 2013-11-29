@@ -47,14 +47,14 @@ def main():
     print "Seeing report to id %s " % USER_ID
 
     project_url = '%s/projects.json?user_id=%s' % (url, USER_ID)
-    response = requests.get(project_url)
+    response = requests.get(project_url, verify=False)
     projects = response.json()['projects']
 
     for project in projects:
         print "Project: %s" % project['name']
 
         time_url = '%s/time_entries.json?spent_on=%s&user_id=%s&project_id=%s' % (url, '%3E%3D'+start_month_date, USER_ID, project['id'])
-        response = requests.get(time_url)
+        response = requests.get(time_url, verify=False)
     
         entries = response.json()['time_entries']
         total = 0
