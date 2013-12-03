@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+tail -r $1
