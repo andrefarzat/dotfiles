@@ -50,7 +50,7 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/MacOS/bin
 export PATH=$PATH:~/.dotfiles/bin
 
 # Reference: https://github.com/PostgresApp/PostgresApp/issues/109#issuecomment-18387546
-#export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:$DYLD_LIBRARY_PATH:/usr/lib:/usr/lib/system:/usr/local/lib
+export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:$DYLD_LIBRARY_PATH:/usr/lib:/usr/lib/system:/usr/local/lib
 
 
 ### Added by the Heroku Toolbelt
