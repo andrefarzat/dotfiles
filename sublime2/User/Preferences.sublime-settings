@@ -1,6 +1,18 @@
 {
 	"color_scheme": "Packages/Future Funk - Color Scheme/Future Funk.tmTheme",
-	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".sass-cache"],
-	"ignored_packages": ["Vintage"],
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		".sass-cache"
+	],
+	"font_size": 13.0,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"translate_tabs_to_spaces": true,
 	"word_wrap": false
 }

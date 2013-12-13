@@ -46,14 +46,28 @@ def main():
 
     print "Seeing report to id %s " % USER_ID
 
-    project_url = '%s/projects.json?user_id=%s' % (url, USER_ID)
+    project_url = '%s/projects.json?user_id=%s&limit=100' % (url, USER_ID)
     response = requests.get(project_url, verify=False)
     projects = response.json()['projects']
 
     for project in projects:
+        if 'parent' in project:
+            # print "Skiping %s..." % project['name']
+            continue
+
         print "Project: %s" % project['name']
 
-        time_url = '%s/time_entries.json?spent_on=%s&user_id=%s&project_id=%s' % (url, '%3E%3D'+start_month_date, USER_ID, project['id'])
+        data = {
+            'url': url,
+            'spent_on' : '%3E%3D'+start_month_date,
+            'user_id': USER_ID,
+            'project_id': project['id']
+        }
+
+        time_url = ("{url}/time_entries.json?spent_on={spent_on}"
+                    "&user_id={user_id}&project_id={project_id}&"
+                    "limit=100".format(**data))
+
         response = requests.get(time_url, verify=False)
     
         entries = response.json()['time_entries']
@@ -82,5 +96,16 @@ def main():
     total_after_taxes = total_before_taxes - (total_before_taxes * 0.35)
     print "Total after taxes %s" % total_after_taxes
 
+
+
+def neo_main():
+    url = 'http://%s:%s@redmine.caravan.coop' % (USER, PASSWD)
+    now = datetime.now()
+    start_month_date = datetime(year=now.year, month=now.month, day=1).strftime(DATE_FORMAT)
+    time_url = '%s/time_entries.json?spent_on=%s&user_id=me' % (url, '%3E%3D'+start_month_date)
+
+
+
 if __name__ == '__main__':
     main()
+    # neo_main()
