@@ -1,28 +1,24 @@
 #!/usr/bin/python
 
-import requests
-import os
+try:
+    from local_settings import REDMINE_USER, REDMINE_PASSWORD
+except ImportError:
+    print "local_settings is missing..."
+    exit()
+
+try:
+    from redmine import Redmine
+except ImportError:
+    print "pyredmine isn't installed"
+    print "pls, do: `pip install pyredmine`"
+    exit()
+
 import sys
-import time
-from datetime import datetime, timedelta
-from pprint import pprint as pp
+from urllib2 import HTTPError
+from datetime import datetime
 
-from local_settings import REDMINE_USER, REDMINE_PASSWORD
-
-USERS = {
-    'jo': 5,
-    'ben': 6,
-    'andre': 30
-}
-
-USER_ID = USERS['andre']
-USER = REDMINE_USER
-PASSWD = REDMINE_PASSWORD
-DATE_FORMAT = '%Y-%m-%d'
-
-
-if len(sys.argv) > 1:
-    USER_ID = USERS.get(sys.argv[1], USERS['andre'])
+def p( *args ):
+    print " ".join( [ unicode(i) for i in args ] )
 
 def get_first_day_of_week(now):
     date_str = '%s %s 1' % (now.year, now.strftime('%W'))
@@ -32,80 +28,112 @@ def get_last_day_of_week(now):
     date_str = '%s %s 0' % (now.year, now.strftime('%W'))
     return datetime.strptime(date_str, '%Y %W %w').strftime(DATE_FORMAT)
 
-def main():
-    url = 'http://%s:%s@redmine.caravan.coop' % (USER, PASSWD)
-    now = datetime.now()
-    today = now.strftime(DATE_FORMAT)
-    start_week_date = get_first_day_of_week(now)
-    end_week_date = get_last_day_of_week(now)
-    start_month_date = datetime(year=now.year, month=now.month, day=1).strftime(DATE_FORMAT)
+def is_current_week(date):
+    return date.strftime(DATE_FORMAT) > FIRST_DAY_OF_WEEK and date.strftime(DATE_FORMAT) < LAST_DAY_OF_WEEK
 
+def is_today(date):
+    return date.year == NOW.year and date.month == NOW.month and date.day == NOW.day
+
+
+NOW = datetime.now()
+DATE_FORMAT = '%Y-%m-%d'
+START_MONTH_DATE = datetime(year=NOW.year, month=NOW.month, day=1).strftime(DATE_FORMAT)
+FIRST_DAY_OF_WEEK = get_first_day_of_week(NOW)
+LAST_DAY_OF_WEEK = get_last_day_of_week(NOW)
+
+
+red = Redmine('http://redmine.caravan.coop', username=REDMINE_USER, password=REDMINE_PASSWORD)
+
+def _by_projects():
     today_total = 0
     week_total = 0
     super_total = 0
 
-    print "Seeing report to id %s " % USER_ID
+    p('Loading projects...')
+    for i in xrange(1, 100):
+        try:
+            project = red.projects[i]
+        except HTTPError:
+            continue
+        except KeyError:
+            break
 
-    project_url = '%s/projects.json?user_id=%s&limit=100' % (url, USER_ID)
-    response = requests.get(project_url, verify=False)
-    projects = response.json()['projects']
-
-    for project in projects:
-        if 'parent' in project:
-            # print "Skiping %s..." % project['name']
+        if project.parent:
             continue
 
-        print "Project: %s" % project['name']
-
-        data = {
-            'url': url,
-            'spent_on' : '%3E%3D'+start_month_date,
-            'user_id': USER_ID,
-            'project_id': project['id']
-        }
-
-        time_url = ("{url}/time_entries.json?spent_on={spent_on}"
-                    "&user_id={user_id}&project_id={project_id}&"
-                    "limit=100".format(**data))
-
-        response = requests.get(time_url, verify=False)
-    
-        entries = response.json()['time_entries']
-        total = 0
-
+        entries = project.time_entries(user_id=red.user.id, spent_on='>='+START_MONTH_DATE)
+        project_today_total = 0
+        project_week_total = 0
+        project_total = 0
         for entry in entries:
-            total += entry['hours']
-            super_total += entry['hours']
+            project_total += entry.hours
+            super_total += entry.hours
 
-            if entry['spent_on'] >= start_week_date and entry['spent_on'] <= end_week_date:
-                week_total += entry['hours']
+            if is_current_week(entry.spent_on):
+                project_week_total += entry.hours
+                week_total += entry.hours
 
-            if entry['spent_on'] == today:
-                today_total += entry['hours']
+            if is_today(entry.spent_on):
+                project_today_total += entry.hours
+                today_total += entry.hours
 
-        print "Hours: %s" % total
+        if project_total > 0:
+            print ""
+            p("Project:", project.name)
+            p("Hours today: %s; week: %s; total: %s" % (project_today_total, project_week_total, project_total))
+
+    return {
+        'today': today_total,
+        'week': week_total,
+        'total': super_total
+    }
+
+
+def _by_time_entries():
+    today_total = 0
+    week_total = 0
+    super_total = 0
+
+    p('Loading entries...')
+    entries = red.time_entries(user_id=red.user.id, spent_on='>='+START_MONTH_DATE)
+    for entry in entries:
+        super_total += entry.hours
+
+        if is_current_week(entry.spent_on):
+            week_total += entry.hours
+
+        if is_today(entry.spent_on):
+            today_total += entry.hours
+
+    return {
+        'today': today_total,
+        'week': week_total,
+        'total': super_total
+    }
+
+
+def main(by_what):
+    if by_what in ['project', 'projects', 'p']:
+        result = _by_projects()
+    else:
+        result = _by_time_entries()
 
     print ""
-    print "Total hours for today: %s (%s)" % (today_total, today)
-    print "Total hours for the week: %s (%s - %s)" % (week_total, start_week_date, end_week_date)
-    print "Total hours for the month: %s (%s)" % (super_total, start_month_date)
+    print "Total hours for today: %s (%s)" % (result['today'], NOW.strftime(DATE_FORMAT))
+    print "Total hours for the week: %s (%s - %s)" % (result['week'], FIRST_DAY_OF_WEEK, LAST_DAY_OF_WEEK)
+    print "Total hours for the month: %s (%s)" % (result['total'], START_MONTH_DATE)
 
     print ""
-    total_before_taxes = super_total * 45
+    total_before_taxes = result['total'] * 45
     print "Total before taxes: %s" % total_before_taxes
     total_after_taxes = total_before_taxes - (total_before_taxes * 0.35)
     print "Total after taxes %s" % total_after_taxes
 
 
-
-def neo_main():
-    url = 'http://%s:%s@redmine.caravan.coop' % (USER, PASSWD)
-    now = datetime.now()
-    start_month_date = datetime(year=now.year, month=now.month, day=1).strftime(DATE_FORMAT)
-    time_url = '%s/time_entries.json?spent_on=%s&user_id=me' % (url, '%3E%3D'+start_month_date)
-
-
-
 if __name__ == '__main__':
-    main()
-    # neo_main()
+    try:
+        by_what = sys.argv[1]
+    except IndexError:
+        by_what = 'entries'
+
+    main(by_what)
