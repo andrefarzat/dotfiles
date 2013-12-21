@@ -1,5 +1,7 @@
 # aliases
 
+disable -a l
+
 alias cdd="cd /Library/WebServer/Documents"
 alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
 

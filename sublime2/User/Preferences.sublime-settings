@@ -1,12 +1,37 @@
 {
 	"color_scheme": "Packages/Future Funk - Color Scheme/Future Funk.tmTheme",
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.po"
+	],
 	"folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		".hg",
 		"CVS",
-		".sass-cache"
+		".sass-cache",
+		"eggs",
+		"downloads"
 	],
 	"font_size": 13.0,
 	"ignored_packages":
