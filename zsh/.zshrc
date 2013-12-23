@@ -54,4 +54,14 @@ source ~/.profile
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Adding our completion folder
+fpath=(~/.dotfiles/completion $fpath)
+
+# compsys initialization
+autoload -Uz compinit
+compinit
+
+# show completion menu when number of options is at least 2
+zstyle ':completion:*' menu select=2
+
 source ~/.zsh_aliases

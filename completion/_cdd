@@ -1,0 +1,6 @@
+#compdef cdd
+
+folder_list=$(ls -c /Library/WebServer/Documents | xargs)
+
+
+_arguments "1: :($folder_list)"

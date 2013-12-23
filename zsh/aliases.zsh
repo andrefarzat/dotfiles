@@ -2,7 +2,6 @@
 
 disable -a l
 
-alias cdd="cd /Library/WebServer/Documents"
 alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
 
 alias env_fipro="source ~/Documents/envs/fipro/bin/activate; cdd; cd FichaProcesso/trunk/src"
@@ -28,4 +27,10 @@ runserver(){
         echo "You're not in a django project"
     fi
 
+}
+
+cdd(){
+    dir=$(echo $@ | tr -d " ")
+
+    [[ $dir != "" ]] && cd /Library/WebServer/Documents/$dir || cd /Library/WebServer/Documents
 }
