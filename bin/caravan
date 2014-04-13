@@ -124,10 +124,12 @@ def main(by_what):
     print "Total hours for the month: %s (%s)" % (result['total'], START_MONTH_DATE)
 
     print ""
-    total_before_taxes = result['total'] * 45
-    print "Total before taxes: %s" % total_before_taxes
-    total_after_taxes = total_before_taxes - (total_before_taxes * 0.35)
-    print "Total after taxes %s" % total_after_taxes
+    # total_before_taxes = result['total'] * 45
+    # print "Total before taxes: %s" % total_before_taxes
+    # total_after_taxes = total_before_taxes - (total_before_taxes * 0.35)
+    # print "Total after taxes %s" % total_after_taxes
+
+    print "Total %s" % (result['total'] * 28, )
 
 
 if __name__ == '__main__':

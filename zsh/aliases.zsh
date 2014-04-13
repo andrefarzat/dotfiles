@@ -40,3 +40,8 @@ cdd(){
 
     [[ $dir != "" ]] && cd /Library/WebServer/Documents/$dir || cd /Library/WebServer/Documents
 }
+
+
+
+alias t="python /Library/WebServer/Documents/t/t.py --task-dir ~/tasks --list tasks"
+
