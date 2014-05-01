@@ -4,7 +4,6 @@ disable -a l
 
 alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
 
-alias env_fipro="source ~/Documents/envs/fipro/bin/activate; cdd; cd FichaProcesso/trunk/src"
 alias env_caravan="source ~/Documents/envs/caravan/bin/activate; cdd; cd caravan-coop"
 alias env_plotly="source ~/Documents/envs/plotly/bin/activate; cdd; cd streambed/shelly"
 
@@ -31,6 +30,12 @@ runserver(){
     else
         # if reached here, well ...
         echo "You're not in a django project"
+        echo "Would you like to start the php server ? ([y]/n)"
+        read 'yesno'
+        if [[ "$yesno" == "" || "$yesno" == "y" ]]; then
+            echo "php -S 0.0.0.0:8000"
+            php -S 0.0.0.0:8000
+        fi
     fi
 
 }

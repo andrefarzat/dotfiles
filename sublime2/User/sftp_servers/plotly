@@ -8,7 +8,7 @@
     "sync_down_on_open": true,
     "sync_same_age": true,
     
-    "host": "ec2-107-20-32-233.compute-1.amazonaws.com",
+    "host": "ec2-50-16-174-169.compute-1.amazonaws.com",
     "user": "ubuntu",
     "port": "22",
     

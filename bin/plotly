@@ -1,3 +1,6 @@
 #!/bin/zsh
 
-ssh -i ~/.ssh/alex-dev.pem ubuntu@ec2-107-20-32-233.compute-1.amazonaws.com
+#ssh -i ~/.ssh/alex-dev.pem ubuntu@ec2-107-20-32-233.compute-1.amazonaws.com
+#ssh -i ~/.ssh/alex-dev.pem ubuntu@ec2-54-83-131-177.compute-1.amazonaws.com
+#ssh -i ~/.ssh/alex-dev.pem ubuntu@ec2-23-23-27-174.compute-1.amazonaws.com
+ssh -i ~/.ssh/alex-dev.pem ubuntu@ec2-50-16-174-169.compute-1.amazonaws.com
