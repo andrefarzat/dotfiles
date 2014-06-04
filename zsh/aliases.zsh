@@ -7,7 +7,7 @@ alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
 alias env_caravan="source ~/Documents/envs/caravan/bin/activate; cdd; cd caravan-coop"
 alias env_plotly="source ~/Documents/envs/plotly/bin/activate; cdd; cd streambed/shelly"
 
-projects=('assembl' 'mtlpy' 'parasuco' 'parasucoextranet' 'linh' 'csf' 'parasucocorp' 'styleguide' 'prana' 'auf' 'campus' 'graffmap' 'educatheque')
+projects=('assembl' 'mtlpy' 'parasuco' 'parasucoextranet' 'linh' 'csf' 'parasucocorp' 'styleguide' 'prana' 'auf' 'campus' 'graffmap' 'educatheque' 'webp')
 for project in "${projects[@]}"
 do
     alias "env_$project"="source ~/Documents/envs/$project/bin/activate; cdd; cd $project"

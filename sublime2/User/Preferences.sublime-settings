@@ -1,5 +1,6 @@
 {
 	"color_scheme": "Packages/Future Funk - Color Scheme/Future Funk (Grey Tuesday).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -33,9 +34,11 @@
 		"downloads",
 		"staticfiles",
 		"fixtures",
-		"CACHE"
+		"CACHE",
+		"bower_components"
 	],
-	"font_size": 14.0,
+	"font_size": 12.0,
+	"highlight_line": true,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -45,5 +48,6 @@
 		80
 	],
 	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
 }
