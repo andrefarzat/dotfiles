@@ -1,0 +1,12 @@
+Host plot
+    HostName ec2-107-20-32-233.compute-1.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/alex-dev.pem
+    ServerAliveInterval 300
+    ServerAliveCountMax 36
+
+Host julie-plot
+    HostName ec2-54-198-175-145.compute-1.amazonaws.com
+    User ubuntu
+    IdentityFile ~/.ssh/id_rsa
+
