@@ -10,3 +10,6 @@ Host julie-plot
     User ubuntu
     IdentityFile ~/.ssh/id_rsa
 
+Host andrefarzat
+    Hostname andrefarzat.com
+    IdentitiesOnly yes

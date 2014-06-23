@@ -1,0 +1,198 @@
+2014-06-08 23:45:49
+Error parsing remote folder listing:
+  -rw-rw-r--    1 ubuntu   ubuntu   11397624 Sep  8  2012 #Channel_Normal_Table.csv#
+  -rw-rw-r--    1 ubuntu   ubuntu         14 Jul  1  2012 #shelly.html#
+  drwxr-xr-x   29 ubuntu   ubuntu       4096 Jun  5 20:17 .
+  drwxr-xr-x    6 root     root         4096 Nov  6  2012 ..
+  -rw-------    1 ubuntu   ubuntu        444 Apr 18 03:28 .Xauthority
+  -rw-rw-r--    1 ubuntu   ubuntu        779 Jun  5 20:17 .bash_aliases
+  -rw-------    1 ubuntu   ubuntu      35356 Jun  9 01:10 .bash_history
+  -rw-r--r--    1 ubuntu   ubuntu        220 Apr  3  2012 .bash_logout
+  -rw-rw-r--    1 ubuntu   ubuntu        136 Oct 31  2013 .bash_profile
+  -rw-r--r--    1 ubuntu   ubuntu       4893 Apr 26 01:35 .bashrc
+  -rw-r--r--    1 ubuntu   ubuntu       4466 Nov  7  2012 .bashrc~
+  drwx------    3 ubuntu   ubuntu       4096 May 13 21:32 .cache
+  drwxr-xr-x    5 ubuntu   ubuntu       4096 Oct 13  2012 .chartio.d
+  -rw-rw-r--    1 ubuntu   ubuntu          0 Apr 21 16:38 .cloud-locale-test.skip
+  drwxr-x--x    5 ubuntu   ubuntu       4096 May 13 21:31 .config
+  drwxrwxr-x    5 ubuntu   ubuntu       4096 Nov  6  2012 .cpan
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 May 23 04:44 .distlib
+  drwx------    3 ubuntu   ubuntu       4096 Jun 13  2012 .emacs.d
+  drwxr-xr-x    2 ubuntu   ubuntu       4096 Feb  4 15:57 .fontconfig
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 Sep 20  2013 .gem
+  -rw-rw-r--    1 ubuntu   ubuntu        185 Apr 25 17:08 .gitconfig
+  drwx------    2 ubuntu   ubuntu       4096 Oct 13  2012 .gnome2
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 Jul  1  2012 .ipython
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 May 13 21:32 .local
+  drwxrwxr-x    2 ubuntu   ubuntu       4096 Jun  9 02:00 .matplotlib
+  -rw-------    1 ubuntu   ubuntu       7170 Mar 22 22:12 .mysql_history
+  -rw-------    1 ubuntu   ubuntu        191 May  7 04:25 .nano_history
+  drwxr-xr-x    3 ubuntu   ubuntu       4096 May 13 21:29 .node-gyp
+  drwxr-xr-x  402 ubuntu   ubuntu      28672 Jun  8 12:43 .npm
+  -rw-------    1 ubuntu   ubuntu         37 May 13 21:17 .npmrc
+  drwx------    3 ubuntu   ubuntu       4096 Oct 30  2013 .picloud
+  drwxrwxr-x    2 ubuntu   ubuntu       4096 Sep 28  2012 .pip
+  -rw-r--r--    1 ubuntu   ubuntu        675 Apr  3  2012 .profile
+  -rw-------    1 ubuntu   ubuntu       1024 Apr  9 19:26 .rnd
+  drwxrwxr-x   23 ubuntu   ubuntu       4096 Sep 20  2013 .rvm
+  -rw-rw-r--    1 ubuntu   ubuntu         66 Nov  8  2013 .selected_editor
+  drwx------    2 ubuntu   ubuntu       4096 Apr 21 17:02 .ssh
+  -rw-r--r--    1 ubuntu   ubuntu          0 Jun  8  2012 .sudo_as_admin_successful
+  drwxr-xr-x    2 ubuntu   ubuntu       4096 May 15 21:13 .vim
+  -rw-------    1 ubuntu   ubuntu      13735 Jun  5 20:17 .viminfo
+  -rw-rw-r--    1 ubuntu   ubuntu        118 Sep 20  2013 .zprofile
+  -rw-rw-r--    1 ubuntu   ubuntu         59 Sep 20  2013 .zshrc
+  -rw-rw-r--    1 ubuntu   ubuntu         54 Sep  8  2012 Aux_Global_Data_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu         47 Sep  8  2012 Auxiliary_Table.csv
+  -rw-r--r--    1 ubuntu   ubuntu     125440 Nov  6  2012 BugzillaSkin_codevocation.tar
+  -rw-rw-r--    1 ubuntu   ubuntu       1106 Apr 10 00:24 CSR.csr
+  -rw-rw-r--    1 ubuntu   ubuntu       6866 Sep  8  2012 Channel_Statistic_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu       1045 Sep  8  2012 Event_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        578 Sep  8  2012 Global_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu         62 Sep  8  2012 MCell_Aci_Data_Table.csv
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 Jul  6  2012 Mail
+  -rwxrwxrwx    1 root     root           53 Sep 27  2012 README.txt
+  -rw-rw-r--    1 ubuntu   ubuntu        846 Sep  8  2012 Resume_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        582 Sep  8  2012 Smart_Battery_Clock_Stretch_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        434 Sep  8  2012 Smart_Battery_Data_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        226 Sep  8  2012 Smart_Battery_Info_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu         86 Sep  8  2012 Version_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        723 Sep  8  2012 access.py
+  -rw-rw-r--    1 ubuntu   ubuntu        726 Sep  8  2012 access.py~
+  drwxrwxr-x    2 ubuntu   ubuntu       4096 Apr 25 15:26 backup
+  drwxr-xr-x    6 ubuntu   ubuntu       4096 Sep  9  2012 batik-1.7
+  drwxrwxr-x    6 ubuntu   ubuntu       4096 Sep 16  2012 django-registration
+  drwxr-xr-x    8 ubuntu   ubuntu       4096 May  7  2013 dropbox-python-sdk-1.5.1
+  -rw-rw-r--    1 ubuntu   ubuntu          0 Sep  8  2012 el_Normal_Table
+  Cha.csv
+  -rwxrwxrwx    1 ubuntu   ubuntu      35778 Jun  8  2013 emails.csv
+  -rw-------    1 ubuntu   ubuntu       1696 Nov  7  2012 jparmer.pem
+  drwxr-xr-x    3 ubuntu   ubuntu       4096 Jun 13  2012 mod_wsgi-3.3
+  -rw-r--r--    1 ubuntu   ubuntu     117930 Jun 13  2012 mod_wsgi-3.3.tar.gz
+  -rw-rw-r--    1 ubuntu   ubuntu       1704 Apr 10 00:25 myserver.key
+  -rwxrwxrwx    1 ubuntu   ubuntu       1704 Apr  9 23:50 myserver_old.key
+  -rw-r--r--    1 ubuntu   ubuntu      18602 Sep  9  2012 newtest (1).svg
+  -rw-rw-r--    1 ubuntu   ubuntu       8336 Sep  9  2012 newtest2.pdf
+  -rw-rw-r--    1 ubuntu   ubuntu      48428 Sep  9  2012 newtest2.png
+  -rw-r--r--    1 ubuntu   ubuntu      18602 Sep  9  2012 newtest2.svg
+  -rw-r--r--    1 ubuntu   ubuntu      18602 Oct 13  2012 nn.svg
+  -rw-rw-r--    1 ubuntu   ubuntu      23080 Feb  4 15:57 out.pdf
+  -rw-rw-r--    1 ubuntu   ubuntu     141155 Feb  4 16:16 out.png
+  -rw-r--r--    1 ubuntu   ubuntu      47419 Feb  4 15:56 plot_from_api_117.svg
+  drwxrwxr-x    6 ubuntu   ubuntu       4096 May  6 00:47 redis-stable
+  -rw-rw-r--    1 ubuntu   ubuntu       1078 Nov  3  2013 server.csr
+  -rw-rw-r--    1 ubuntu   ubuntu       1033 Nov  2  2012 server_old.csr
+  -rw-rw-r--    1 ubuntu   ubuntu          0 Sep  8  2012 t_Table
+  Smart_Battery_I.csv
+  drwxr-xr-x    3 root     root         4096 Jun  8 12:42 tmp
+  -rwxrwxrwx    1 ubuntu   ubuntu         35 Jul 29  2012 tmp.py
+2014-06-08 23:45:49
+Traceback (most recent call last):
+  File "./sftp/threads.py", line 15, in run_with_except_hook
+  File "./sftp/threads.py", line 113, in handler
+  File "./sftp/commands.py", line 332, in run
+  File "./sftp/commands.py", line 480, in do_operation
+  File "./sftp/file_transfer.py", line 34, in handler
+  File "./sftp/file_transfer.py", line 432, in list
+  File "./sftp/sftp_transport.py", line 442, in ls
+  File "./sftp/file_transfer.py", line 820, in parse_ls
+ConnectionError: Error parsing remote folder listing
+2014-06-08 23:45:56
+Error parsing remote folder listing:
+  -rw-rw-r--    1 ubuntu   ubuntu   11397624 Sep  8  2012 #Channel_Normal_Table.csv#
+  -rw-rw-r--    1 ubuntu   ubuntu         14 Jul  1  2012 #shelly.html#
+  drwxr-xr-x   29 ubuntu   ubuntu       4096 Jun  5 20:17 .
+  drwxr-xr-x    6 root     root         4096 Nov  6  2012 ..
+  -rw-------    1 ubuntu   ubuntu        444 Apr 18 03:28 .Xauthority
+  -rw-rw-r--    1 ubuntu   ubuntu        779 Jun  5 20:17 .bash_aliases
+  -rw-------    1 ubuntu   ubuntu      35356 Jun  9 01:10 .bash_history
+  -rw-r--r--    1 ubuntu   ubuntu        220 Apr  3  2012 .bash_logout
+  -rw-rw-r--    1 ubuntu   ubuntu        136 Oct 31  2013 .bash_profile
+  -rw-r--r--    1 ubuntu   ubuntu       4893 Apr 26 01:35 .bashrc
+  -rw-r--r--    1 ubuntu   ubuntu       4466 Nov  7  2012 .bashrc~
+  drwx------    3 ubuntu   ubuntu       4096 May 13 21:32 .cache
+  drwxr-xr-x    5 ubuntu   ubuntu       4096 Oct 13  2012 .chartio.d
+  -rw-rw-r--    1 ubuntu   ubuntu          0 Apr 21 16:38 .cloud-locale-test.skip
+  drwxr-x--x    5 ubuntu   ubuntu       4096 May 13 21:31 .config
+  drwxrwxr-x    5 ubuntu   ubuntu       4096 Nov  6  2012 .cpan
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 May 23 04:44 .distlib
+  drwx------    3 ubuntu   ubuntu       4096 Jun 13  2012 .emacs.d
+  drwxr-xr-x    2 ubuntu   ubuntu       4096 Feb  4 15:57 .fontconfig
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 Sep 20  2013 .gem
+  -rw-rw-r--    1 ubuntu   ubuntu        185 Apr 25 17:08 .gitconfig
+  drwx------    2 ubuntu   ubuntu       4096 Oct 13  2012 .gnome2
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 Jul  1  2012 .ipython
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 May 13 21:32 .local
+  drwxrwxr-x    2 ubuntu   ubuntu       4096 Jun  9 02:00 .matplotlib
+  -rw-------    1 ubuntu   ubuntu       7170 Mar 22 22:12 .mysql_history
+  -rw-------    1 ubuntu   ubuntu        191 May  7 04:25 .nano_history
+  drwxr-xr-x    3 ubuntu   ubuntu       4096 May 13 21:29 .node-gyp
+  drwxr-xr-x  402 ubuntu   ubuntu      28672 Jun  8 12:43 .npm
+  -rw-------    1 ubuntu   ubuntu         37 May 13 21:17 .npmrc
+  drwx------    3 ubuntu   ubuntu       4096 Oct 30  2013 .picloud
+  drwxrwxr-x    2 ubuntu   ubuntu       4096 Sep 28  2012 .pip
+  -rw-r--r--    1 ubuntu   ubuntu        675 Apr  3  2012 .profile
+  -rw-------    1 ubuntu   ubuntu       1024 Apr  9 19:26 .rnd
+  drwxrwxr-x   23 ubuntu   ubuntu       4096 Sep 20  2013 .rvm
+  -rw-rw-r--    1 ubuntu   ubuntu         66 Nov  8  2013 .selected_editor
+  drwx------    2 ubuntu   ubuntu       4096 Apr 21 17:02 .ssh
+  -rw-r--r--    1 ubuntu   ubuntu          0 Jun  8  2012 .sudo_as_admin_successful
+  drwxr-xr-x    2 ubuntu   ubuntu       4096 May 15 21:13 .vim
+  -rw-------    1 ubuntu   ubuntu      13735 Jun  5 20:17 .viminfo
+  -rw-rw-r--    1 ubuntu   ubuntu        118 Sep 20  2013 .zprofile
+  -rw-rw-r--    1 ubuntu   ubuntu         59 Sep 20  2013 .zshrc
+  -rw-rw-r--    1 ubuntu   ubuntu         54 Sep  8  2012 Aux_Global_Data_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu         47 Sep  8  2012 Auxiliary_Table.csv
+  -rw-r--r--    1 ubuntu   ubuntu     125440 Nov  6  2012 BugzillaSkin_codevocation.tar
+  -rw-rw-r--    1 ubuntu   ubuntu       1106 Apr 10 00:24 CSR.csr
+  -rw-rw-r--    1 ubuntu   ubuntu       6866 Sep  8  2012 Channel_Statistic_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu       1045 Sep  8  2012 Event_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        578 Sep  8  2012 Global_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu         62 Sep  8  2012 MCell_Aci_Data_Table.csv
+  drwxrwxr-x    3 ubuntu   ubuntu       4096 Jul  6  2012 Mail
+  -rwxrwxrwx    1 root     root           53 Sep 27  2012 README.txt
+  -rw-rw-r--    1 ubuntu   ubuntu        846 Sep  8  2012 Resume_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        582 Sep  8  2012 Smart_Battery_Clock_Stretch_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        434 Sep  8  2012 Smart_Battery_Data_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        226 Sep  8  2012 Smart_Battery_Info_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu         86 Sep  8  2012 Version_Table.csv
+  -rw-rw-r--    1 ubuntu   ubuntu        723 Sep  8  2012 access.py
+  -rw-rw-r--    1 ubuntu   ubuntu        726 Sep  8  2012 access.py~
+  drwxrwxr-x    2 ubuntu   ubuntu       4096 Apr 25 15:26 backup
+  drwxr-xr-x    6 ubuntu   ubuntu       4096 Sep  9  2012 batik-1.7
+  drwxrwxr-x    6 ubuntu   ubuntu       4096 Sep 16  2012 django-registration
+  drwxr-xr-x    8 ubuntu   ubuntu       4096 May  7  2013 dropbox-python-sdk-1.5.1
+  -rw-rw-r--    1 ubuntu   ubuntu          0 Sep  8  2012 el_Normal_Table
+  Cha.csv
+  -rwxrwxrwx    1 ubuntu   ubuntu      35778 Jun  8  2013 emails.csv
+  -rw-------    1 ubuntu   ubuntu       1696 Nov  7  2012 jparmer.pem
+  drwxr-xr-x    3 ubuntu   ubuntu       4096 Jun 13  2012 mod_wsgi-3.3
+  -rw-r--r--    1 ubuntu   ubuntu     117930 Jun 13  2012 mod_wsgi-3.3.tar.gz
+  -rw-rw-r--    1 ubuntu   ubuntu       1704 Apr 10 00:25 myserver.key
+  -rwxrwxrwx    1 ubuntu   ubuntu       1704 Apr  9 23:50 myserver_old.key
+  -rw-r--r--    1 ubuntu   ubuntu      18602 Sep  9  2012 newtest (1).svg
+  -rw-rw-r--    1 ubuntu   ubuntu       8336 Sep  9  2012 newtest2.pdf
+  -rw-rw-r--    1 ubuntu   ubuntu      48428 Sep  9  2012 newtest2.png
+  -rw-r--r--    1 ubuntu   ubuntu      18602 Sep  9  2012 newtest2.svg
+  -rw-r--r--    1 ubuntu   ubuntu      18602 Oct 13  2012 nn.svg
+  -rw-rw-r--    1 ubuntu   ubuntu      23080 Feb  4 15:57 out.pdf
+  -rw-rw-r--    1 ubuntu   ubuntu     141155 Feb  4 16:16 out.png
+  -rw-r--r--    1 ubuntu   ubuntu      47419 Feb  4 15:56 plot_from_api_117.svg
+  drwxrwxr-x    6 ubuntu   ubuntu       4096 May  6 00:47 redis-stable
+  -rw-rw-r--    1 ubuntu   ubuntu       1078 Nov  3  2013 server.csr
+  -rw-rw-r--    1 ubuntu   ubuntu       1033 Nov  2  2012 server_old.csr
+  -rw-rw-r--    1 ubuntu   ubuntu          0 Sep  8  2012 t_Table
+  Smart_Battery_I.csv
+  drwxr-xr-x    3 root     root         4096 Jun  8 12:42 tmp
+  -rwxrwxrwx    1 ubuntu   ubuntu         35 Jul 29  2012 tmp.py
+2014-06-08 23:45:57
+Traceback (most recent call last):
+  File "./sftp/threads.py", line 15, in run_with_except_hook
+  File "./sftp/threads.py", line 113, in handler
+  File "./sftp/commands.py", line 332, in run
+  File "./sftp/commands.py", line 480, in do_operation
+  File "./sftp/file_transfer.py", line 34, in handler
+  File "./sftp/file_transfer.py", line 432, in list
+  File "./sftp/sftp_transport.py", line 442, in ls
+  File "./sftp/file_transfer.py", line 820, in parse_ls
+ConnectionError: Error parsing remote folder listing

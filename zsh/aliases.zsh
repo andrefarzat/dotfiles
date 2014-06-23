@@ -6,6 +6,7 @@ alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
 
 alias env_caravan="source ~/Documents/envs/caravan/bin/activate; cdd; cd caravan-coop"
 alias env_plotly="source ~/Documents/envs/plotly/bin/activate; cdd; cd streambed/shelly"
+alias env_master="source ~/Documents/envs/master/bin/activate; cdd; django-master"
 
 projects=('assembl' 'mtlpy' 'parasuco' 'parasucoextranet' 'linh' 'csf' 'parasucocorp' 'styleguide' 'prana' 'auf' 'campus' 'graffmap' 'educatheque' 'webp')
 for project in "${projects[@]}"
@@ -14,7 +15,7 @@ do
 done
 
 runserver(){
-    
+
     if [ `pwd` = '/Library/WebServer/Documents/graffmap' ]; then
         # Let's first see if we are at graffmap folder
         echo 'python manage.py runserver 0.0.0.0:8000 --settings split_settings'

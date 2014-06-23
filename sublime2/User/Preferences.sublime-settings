@@ -33,7 +33,6 @@
 		"eggs",
 		"downloads",
 		"staticfiles",
-		"fixtures",
 		"CACHE",
 		"bower_components"
 	],
@@ -45,7 +44,8 @@
 	],
 	"rulers":
 	[
-		80
+		80,
+		120
 	],
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
