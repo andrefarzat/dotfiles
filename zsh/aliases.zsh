@@ -8,7 +8,7 @@ alias env_caravan="source ~/Documents/envs/caravan/bin/activate; cdd; cd caravan
 alias env_plotly="source ~/Documents/envs/plotly/bin/activate; cdd; cd streambed/shelly"
 alias env_master="source ~/Documents/envs/master/bin/activate; cdd; django-master"
 
-projects=('assembl' 'mtlpy' 'parasuco' 'parasucoextranet' 'linh' 'csf' 'parasucocorp' 'styleguide' 'prana' 'auf' 'campus' 'graffmap' 'educatheque' 'webp')
+projects=('mtlpy' 'linh' 'styleguide' 'webp' 'madeout')
 for project in "${projects[@]}"
 do
     alias "env_$project"="source ~/Documents/envs/$project/bin/activate; cdd; cd $project"

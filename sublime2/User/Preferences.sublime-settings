@@ -34,7 +34,10 @@
 		"downloads",
 		"staticfiles",
 		"CACHE",
-		"bower_components"
+		"bower_components",
+		"bower",
+		"node_modules",
+		"htmlcov"
 	],
 	"font_size": 12.0,
 	"highlight_line": true,

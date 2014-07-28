@@ -6,3 +6,12 @@
 #ssh -i ~/.ssh/alex-dev.pem ubuntu@ec2-50-16-174-169.compute-1.amazonaws.com
 #ssh -i ~/.ssh/alex-dev.pem ubuntu@ec2-54-89-56-244.compute-1.amazonaws.com
 ssh -l ubuntu -i ~/.ssh/developer.pem ec2-50-19-175-18.compute-1.amazonaws.com
+
+
+# Carmel's
+# ssh -l ubuntu -i ~/.ssh/jparmer.pem ec2-54-81-121-242.compute-1.amazonaws.com
+
+
+# Stage's
+# ssh -l ubuntu -i ~/.ssh/developer.pem ec2-54-196-68-79.compute-1.amazonaws.com
+# ssh -l ubuntu -i ~/.ssh/developer.pem 54.197.227.104
