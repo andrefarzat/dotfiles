@@ -5,11 +5,18 @@ Host plot
     ServerAliveInterval 300
     ServerAliveCountMax 36
 
-Host julie-plot
-    HostName ec2-54-198-175-145.compute-1.amazonaws.com
-    User ubuntu
-    IdentityFile ~/.ssh/id_rsa
-
 Host andrefarzat
     Hostname andrefarzat.com
     IdentitiesOnly yes
+
+Host frontstage
+    HostName 54.197.227.104
+    User ubuntu
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/developer.pem
+
+Host backstage
+    HostName 54.242.68.249
+    User ubuntu
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/alex-dev.pem

@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+
+branches=`git branch --merged`
+
+if echo $branches | egrep -q "^\* master"; then;
+else
+    echo "We aren't in master branch. Sorry..."
+    exit 1
+fi
+
+# removing master from the list
+branches=`git branch --merged | egrep --invert-match "^\* master"`
+
+echo "These are the branches which gonna be removed: "
+
+echo $branches
+
+echo "Do you wish to install this program? (y/[n])"
+read yn
+
+
+if [[ $yn == "y" ]]; then
+    git branch -d `echo $branches | xargs`
+fi

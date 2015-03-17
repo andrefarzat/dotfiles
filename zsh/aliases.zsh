@@ -7,8 +7,11 @@ alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
 alias env_caravan="source ~/Documents/envs/caravan/bin/activate; cdd; cd caravan-coop"
 alias env_plotly="source ~/Documents/envs/plotly/bin/activate; cdd; cd streambed/shelly"
 alias env_master="source ~/Documents/envs/master/bin/activate; cdd; django-master"
+alias env_master_linter="source ~/Documents/envs/master_linter/bin/activate; cdd; django-master-linter"
+alias env_master_place="source ~/Documents/envs/master_place/bin/activate; cdd; master-place"
+alias env_codetask="source ~/Documents/envs/codetask/bin/activate; cdd; codetask"
 
-projects=('mtlpy' 'linh' 'styleguide' 'webp' 'madeout')
+projects=('mtlpy' 'linh' 'styleguide' 'webp' 'madeout' 'boomit' 'afazer')
 for project in "${projects[@]}"
 do
     alias "env_$project"="source ~/Documents/envs/$project/bin/activate; cdd; cd $project"
@@ -51,3 +54,6 @@ cdd(){
 
 alias t="python /Library/WebServer/Documents/t/t.py --task-dir ~/tasks --list tasks"
 
+# Go path
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
