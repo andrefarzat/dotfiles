@@ -11,7 +11,7 @@ alias env_master_linter="source ~/Documents/envs/master_linter/bin/activate; cdd
 alias env_master_place="source ~/Documents/envs/master_place/bin/activate; cdd; master-place"
 alias env_codetask="source ~/Documents/envs/codetask/bin/activate; cdd; codetask"
 
-projects=('mtlpy' 'linh' 'styleguide' 'webp' 'madeout' 'boomit' 'afazer')
+projects=('mtlpy' 'linh' 'styleguide' 'webp' 'madeout' 'boomit' 'afazer' 'clinic')
 for project in "${projects[@]}"
 do
     alias "env_$project"="source ~/Documents/envs/$project/bin/activate; cdd; cd $project"
