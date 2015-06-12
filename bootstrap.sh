@@ -3,7 +3,7 @@
 echo "Installing everything we need in your brand new mac"
 
 echo "Installing homebrew"
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo ""
 echo "Installing zsh"
