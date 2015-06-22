@@ -14,12 +14,9 @@ echo "Installing oh-my-zsh"
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 echo ""
-echo "Installing ipython"
-pip install ipython
-
-echo ""
-echo "Installing virtualenv"
-pip install virtualenv
+echo "Creating the alias for .zshrc"
+ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
+ls -sf ~/.dotfiles/zsh/aliases.zsh ~/.zsh_aliases 
 
 echo ""
 echo "Done! You can have a coke now ;)"
