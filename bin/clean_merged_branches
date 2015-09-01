@@ -16,7 +16,7 @@ echo "These are the branches which gonna be removed: "
 
 echo $branches
 
-echo "Do you wish to install this program? (y/[n])"
+echo "Do you confirm removing these branches? (y/[n])"
 read yn
 
 
