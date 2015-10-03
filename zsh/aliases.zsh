@@ -2,15 +2,6 @@
 
 disable -a l
 
-#alias python_smtp="python -m smtpd -n -c DebuggingServer localhost:1025"
-#alias env_codetask="source ~/Documents/envs/codetask/bin/activate; cdd; codetask"
-
-projects=('linh' 'styleguide')
-for project in "${projects[@]}"
-do
-    alias "env_$project"="source ~/Documents/envs/$project/bin/activate; cdd; cd $project"
-done
-
 runserver(){
 
     if [ -f './manage.py' ]; then
@@ -42,3 +33,6 @@ cdd(){
 # Go path
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# The fuck -> https://github.com/nvbn/thefuck
+eval "$(thefuck --alias)"
