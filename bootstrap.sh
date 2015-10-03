@@ -16,7 +16,11 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 echo ""
 echo "Creating the alias for .zshrc"
 ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
-ls -sf ~/.dotfiles/zsh/aliases.zsh ~/.zsh_aliases 
+ls -sf ~/.dotfiles/zsh/aliases.zsh ~/.zsh_aliases
+
+echo ""
+echo "Installing fish"
+brew install fish
 
 echo ""
 echo "Done! You can have a coke now ;)"
