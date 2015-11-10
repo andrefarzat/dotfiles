@@ -1,0 +1,6 @@
+#!/bin/bash
+lsof -i $2:$1
+
+if [[ ! -z $3 && $3 == "kill" ]]; then
+    killall `lsof -i $2:$1`;
+fi
