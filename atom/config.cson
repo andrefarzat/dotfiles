@@ -1,0 +1,14 @@
+"*":
+  alignment: {}
+  core: {}
+  editor:
+    fontSize: 12
+    invisibles: {}
+    preferredLineLength: 120
+    showIndentGuide: true
+    showInvisibles: true
+  emmet: {}
+  "exception-reporting":
+    userId: "bd2a05a4-7883-9bd7-e189-89bd1b42e841"
+  welcome:
+    showOnStartup: false

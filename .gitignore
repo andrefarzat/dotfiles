@@ -4,6 +4,14 @@
 
 local_settings.py
 
+# Atom
+atom/*
+!atom/config.cson
+!atom/init.zsh
+!atom/init.coffee
+!atom/snippets.cson
+!atom/keymap.cson
+!atom/styles.less
 
 # Sublime3
 Package Control*
