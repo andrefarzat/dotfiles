@@ -4,6 +4,9 @@
 
 local_settings.py
 
+# git
+bin/diff-highlight
+
 # Atom
 atom/*
 !atom/config.cson
@@ -13,5 +16,6 @@ atom/*
 !atom/keymap.cson
 !atom/styles.less
 
-# Sublime3
-Package Control*
+# fish
+fish/fish_history
+fishd.*

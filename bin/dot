@@ -11,7 +11,7 @@ fi
 
 
 if [[ $action == 'init' ]]; then
-    
+
     # Giving executing permition for all bin/* files
     chmod +x $dotdir/bin/*
 
@@ -29,7 +29,6 @@ fi
 
 
 if [[ $action == 'update' ]]; then
-
 
     for file in $dotdir/**/update.zsh
     do
