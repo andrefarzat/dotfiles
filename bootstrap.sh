@@ -23,4 +23,12 @@ echo "Installing fish"
 brew install fish
 
 echo ""
+echo "Installing python3"
+brew install python3
+
+echo ""
+echo "Installing thefuck"
+brew install thefuck
+
+echo ""
 echo "Done! You can have a coke now ;)"
