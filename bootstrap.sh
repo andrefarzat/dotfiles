@@ -44,6 +44,8 @@ echo ""
 echo "Initing all modules"
 /usr/local/bin/zsh ~/.dotfiles/bin/dot init
 
+# Remove outdated versions from the cellar
+brew cleanup
 
 echo ""
 echo "Done! You can have a coke now ;)"
