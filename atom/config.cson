@@ -1,14 +1,28 @@
 "*":
   alignment: {}
-  core: {}
+  core:
+    ignoredNames: [
+      ".git"
+      ".DS_Store"
+      "node_modules"
+      ".idea"
+      "*.log"
+      "__pycache__"
+    ]
   editor:
     fontSize: 12
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
     showInvisibles: true
+    tabLength: 4
   emmet: {}
   "exception-reporting":
     userId: "bd2a05a4-7883-9bd7-e189-89bd1b42e841"
+  "find-and-replace": {}
+  linter: {}
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
