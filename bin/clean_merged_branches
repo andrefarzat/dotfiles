@@ -1,21 +1,18 @@
 #!/bin/zsh
 
 
-branches=`git branch --merged`
-
-if echo $branches | egrep -q "^\* master"; then;
+if hash ipt 2>/dev/null; then;
 else
-    echo "We aren't in master branch. Sorry..."
-    exit 1
-fi
+    echo "ipt isnt installed. Please do 'npm install ipt -g'";
+    exit 1;
+fi;
 
-# removing master from the list
-branches=`git branch --merged | egrep --invert-match "^\* master"`
+echo "Please, select the unmerged branches you want to remove: "
+branches=`git branch --merged | ipt -m`
 
-echo "These are the branches which gonna be removed: "
 
+echo "These branches will be remove from your local:"
 echo $branches
-
 echo "Do you confirm removing these branches? (y/[n])"
 read yn
 

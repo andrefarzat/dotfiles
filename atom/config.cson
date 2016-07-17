@@ -10,7 +10,7 @@
       "__pycache__"
     ]
   editor:
-    fontSize: 12
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
@@ -23,6 +23,17 @@
   linter: {}
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+".ini.source":
+  editor:
+    preferredLineLength: 120
+    tabLength: 4
+".source.ts":
+  editor:
+    preferredLineLength: 120
+    tabLength: 4
+".source.tsx":
+  editor:
+    preferredLineLength: 120
+    tabLength: 4

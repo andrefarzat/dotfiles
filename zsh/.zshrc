@@ -65,3 +65,5 @@ zstyle ':completion:*' menu select=2
 source ~/.zsh_aliases
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
