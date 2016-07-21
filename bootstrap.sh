@@ -41,6 +41,10 @@ echo "Installing rename"
 brew install rename
 
 echo ""
+echo "Installing wifi-password"
+brew install wifi-password
+
+echo ""
 echo "Initing all modules"
 /usr/local/bin/zsh ~/.dotfiles/bin/dot init
 
