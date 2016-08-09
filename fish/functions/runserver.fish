@@ -1,11 +1,16 @@
 
 function runserver --description "Starts a server regarding the current folder"
 
-    if test -f './manage.py'
-        # Let's first see if we are in a django env
-        echo './manage.py runserver 0.0.0.0:8000'
-        python manage.py runserver 0.0.0.0:8000
+    if test -f './manage.py' # Let's first see if we are in a django env
+        set -l cwd (basename (pwd))
 
+        if test -f "./$cwd/settings/dev.py"
+            echo "./manage.py runserver 0.0.0.0:8000 --settings $cwd.settings.dev"
+            python manage.py runserver 0.0.0.0:8000  --settings $cwd.settings.dev
+        else
+            echo './manage.py runserver 0.0.0.0:8000'
+            python manage.py runserver 0.0.0.0:8000
+        end
     else if test -f './bin/django'
         # Then, let's try to see if there is a folder bin and a django file inside it
         echo './bin/django runserver 0.0.0.0:8000'
