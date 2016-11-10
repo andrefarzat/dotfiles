@@ -9,6 +9,7 @@
       "*.log"
       "__pycache__"
     ]
+    telemetryConsent: "limited"
   editor:
     fontSize: 13
     invisibles: {}

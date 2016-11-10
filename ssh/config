@@ -23,3 +23,187 @@ Host backstage
     User ubuntu
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/alex-dev.pem
+
+
+### BEGIN AUTOMATIC PLOTLY EC2 INVENTORY
+Host test-for-presentations
+  Hostname 52.87.168.51
+  User ubuntu
+  ForwardAgent yes
+
+Host stage-monitoring-testing
+  Hostname ec2-54-159-230-144.compute-1.amazonaws.com
+  User ubuntu
+  ForwardAgent yes
+
+Host streaming-examples
+  Hostname ec2-54-224-211-3.compute-1.amazonaws.com
+  User ubuntu
+  ForwardAgent yes
+
+Host ipython-notebook-jack
+  Hostname 54.174.236.77
+  User ubuntu
+  ForwardAgent yes
+
+Host onprem_test
+  Hostname 54.243.3.24
+  User ubuntu
+  ForwardAgent yes
+
+Host Jack_s_mySQL_DB__3
+  Hostname 52.87.196.96
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-redis-001
+  Hostname 54.152.141.114
+  User ubuntu
+  ForwardAgent yes
+
+Host Ambri_for_Raf_lab
+  Hostname 52.7.85.140
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-plotbot-002
+  Hostname 52.0.187.4
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-image-server-002
+  Hostname 52.2.238.26
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-image-server-001
+  Hostname 52.2.89.51
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-image-server-100
+  Hostname 52.90.181.188
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-image-server-101
+  Hostname 52.90.243.16
+  User ubuntu
+  ForwardAgent yes
+
+Host wordpress-moderndata-jack
+  Hostname 54.165.196.23
+  User ubuntu
+  ForwardAgent yes
+
+Host Heliotropetech
+  Hostname 52.6.88.24
+  User ubuntu
+  ForwardAgent yes
+
+Host sighten
+  Hostname 54.152.193.149
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-buildly-001
+  Hostname 52.0.166.238
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streambed-104
+  Hostname 54.85.152.129
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streambed-101
+  Hostname 52.91.96.33
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streambed-103
+  Hostname 54.173.113.163
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streambed-102
+  Hostname 52.90.150.129
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-elasticsearch-001
+  Hostname 52.91.102.154
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streamhead-001
+  Hostname 52.6.78.200
+  User ubuntu
+  ForwardAgent yes
+
+Host Jack_s_mySQL_DB
+  Hostname 54.85.57.8
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-elasticsearch-100
+  Hostname 52.90.206.88
+  User ubuntu
+  ForwardAgent yes
+
+Host matlab-example-server-upgrade-3
+  Hostname 54.210.187.112
+  User ubuntu
+  ForwardAgent yes
+
+Host sighten_test
+  Hostname 54.175.53.254
+  User ubuntu
+  ForwardAgent yes
+
+Host Ambri
+  Hostname 54.175.149.234
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-mmonit-001
+  Hostname 54.174.165.145
+  User ubuntu
+  ForwardAgent yes
+
+Host stage-frontstage
+  Hostname ec2-54-161-212-97.compute-1.amazonaws.com
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streambed-004
+  Hostname 52.90.164.89
+  User ubuntu
+  ForwardAgent yes
+
+Host tarun-testing
+  Hostname 52.90.54.46
+  User ubuntu
+  ForwardAgent yes
+
+Host stage-backstage
+  Hostname ec2-54-163-173-183.compute-1.amazonaws.com
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streambed-001
+  Hostname 52.91.12.85
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streambed-002
+  Hostname 54.88.172.2
+  User ubuntu
+  ForwardAgent yes
+
+Host prod-streambed-003
+  Hostname 52.90.65.184
+  User ubuntu
+  ForwardAgent yes
+
+### END AUTOMATIC PLOTLY EC2 INVENTORY

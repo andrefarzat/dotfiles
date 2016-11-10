@@ -21,6 +21,10 @@ function runserver --description "Starts a server regarding the current folder"
         echo 'app/console server:run 0.0.0.0:8000'
         php app/console server:run 0.0.0.0:8000
 
+    else if test -f './script/rails'
+        # Checks if we are in a rails env
+        echo './script/rails server'
+        ./script/rails server
     else
         # if reached here, well ...
         echo "Would you like to start the php server ? ([y]/n)"
