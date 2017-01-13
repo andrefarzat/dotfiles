@@ -1,1 +1,1 @@
-link_files $dotdir/fish ~/.config
+$dotdir/bin/link_files $dotdir/fish ~/.config

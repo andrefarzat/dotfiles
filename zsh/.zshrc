@@ -59,6 +59,10 @@ fpath=(~/.dotfiles/completion $fpath)
 autoload -Uz compinit
 compinit
 
+# nvm 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # show completion menu when number of options is at least 2
 zstyle ':completion:*' menu select=2
 

@@ -1,1 +1,1 @@
-link_files $dotdir/ssh/config ~/.ssh/config
+$dotdir/bin/link_files $dotdir/ssh/config ~/.ssh/config

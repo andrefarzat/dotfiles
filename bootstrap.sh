@@ -21,6 +21,10 @@ echo "Installing fish"
 brew install fish
 
 echo ""
+echo "Installhing oh-my-fish"
+curl -L http://get.oh-my.fish | fish
+
+echo ""
 echo "Installing python3"
 brew install python3
 
@@ -43,6 +47,15 @@ brew install rename
 echo ""
 echo "Installing wifi-password"
 brew install wifi-password
+
+echo ""
+echo "Installing nvm"
+brew install nvm
+
+echo ""
+echo "Linking the zsh configuration"
+ln -sf ~/.dotfiles/zsh/.zshrc ~/.zshrc
+ln -sf ~/.dotfiles/zsh/aliases.zsh ~/.zsh_aliases
 
 echo ""
 echo "Initing all modules"

@@ -1,1 +1,1 @@
-link_files $dotdir/atom ~/.atom
+$dotdir/bin/link_files $dotdir/atom ~/.atom
