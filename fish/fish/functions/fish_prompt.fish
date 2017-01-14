@@ -1,1 +1,0 @@
-/Users/andrefarzat/.local/share/omf/themes/gianu/fish_prompt.fish
