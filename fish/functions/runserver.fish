@@ -25,6 +25,10 @@ function runserver --description "Starts a server regarding the current folder"
         # Checks if we are in a rails env
         echo './script/rails server'
         ./script/rails server
+    else if test -f './system/router.php'
+        # Checks if we are in a grav env
+        echo 'php -S localhost:8000 system/router.php'
+        php -S localhost:8000 system/router.php
     else
         # if reached here, well ...
         echo "Would you like to start the php server ? ([y]/n)"
