@@ -1,8 +1,7 @@
 
-function resulto --description "Start the env in the given folder" --argument-names folder
+function resulto --description "Start the resulto env"
 
-    set -l resultoRoot /Users/andrefarzat/Documents/resulto
-    set -l projectPath $resultoRoot/$folder
+    set -l projectPath /Users/andrefarzat/Documents/resulto/dusablon
 
     if  test -d $projectPath
         cd $projectPath

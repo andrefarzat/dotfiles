@@ -8,7 +8,7 @@ else
 fi;
 
 echo "Please, select the unmerged branches you want to remove: "
-branches=`git branch --merged | ipt -m`
+branches=`git branch --no-color --merged | ipt -m`
 
 
 echo "These branches will be remove from your local:"

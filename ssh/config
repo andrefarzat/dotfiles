@@ -1,5 +1,8 @@
 Host *
     ServerAliveInterval 120
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
 
 Host plot
     HostName ec2-107-20-32-233.compute-1.amazonaws.com
@@ -8,9 +11,9 @@ Host plot
     ServerAliveInterval 300
     ServerAliveCountMax 36
 
-Host andrefarzat
-    Hostname andrefarzat.com
-    IdentitiesOnly yes
+#Host andrefarzat
+#    Hostname andrefarzat.com
+#    IdentitiesOnly yes
 
 Host frontstage
     HostName 54.197.227.104
